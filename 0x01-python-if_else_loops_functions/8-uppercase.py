@@ -6,6 +6,3 @@ def uppercase(str):
             ch -= 32
         print("{:c}".format(ch), end="")
     print("")
-
-uppercase("beST")
-
