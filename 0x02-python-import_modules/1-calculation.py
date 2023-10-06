@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
 
-if __name__ == "__main__":
 
+def compute(met, sign):
     a = 10
     b = 5
-    # calling all the function is calculator module
-    print("{} + {} = {}". format(a, b, add(a, b)))
-    print("{} - {} = {}". format(a, b, sub(a, b)))
-    print("{} * {} = {}". format(a, b, mul(a, b)))
-    print("{} / {} = {}". format(a, b, div(a, b)))
+    cal = met(a, b)
+    print("{}".format(a), sign,  "{} = {}".format(b, cal))
+
+
+if __name__ == "__main__":
+    compute(add, "+")
+    compute(sub, "-")
+    compute(mul, "*")
+    compute(div, "/")
