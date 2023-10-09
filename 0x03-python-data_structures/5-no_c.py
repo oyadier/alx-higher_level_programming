@@ -9,5 +9,5 @@ def no_c(my_string):
         if ord(i) == 67 or ord(i) == 99:
             new_string += ""
         else:
-            new_string+= i
+            new_string += i
     return new_string
