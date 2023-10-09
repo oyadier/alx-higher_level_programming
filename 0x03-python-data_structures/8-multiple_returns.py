@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 def multiple_returns(sentence):
 
     """multiple_returns - a function that returns a
