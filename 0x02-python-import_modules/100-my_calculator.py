@@ -9,7 +9,7 @@ if __name__ == "__main__":
         second = int(sys.argv[3])
         match (sys.argv[2]):
             case "+":
-                print("{} + {} = {}".format(first, second, add(first, second))) 
+                print("{} + {} = {}".format(first, second, add(first, second)))
             case "-":
                 print("{} - {} = {}".format(first, second, sub(first, second)))
             case "*":
