@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
 
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 3:
         first = int(sys.argv[1])
         second = int(sys.argv[3])
         match (sys.argv[2]):
