@@ -12,7 +12,7 @@ def safe_function(fct, *args):
     result = 0
     try:
         result = fct(args[0], args[1])
+        return result
     except Exception as err:
         sys.stderr.write("Exception: " + str(err) + "\n")
-        result = None
-    return result
+        return None
