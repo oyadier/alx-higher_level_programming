@@ -3,7 +3,7 @@
 """Define a new Square class"""
 
 
-class Square():
+class Square:
 
     """Placing methods here"""
     def __init__(self, size=0):
