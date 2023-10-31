@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 
-"""
-This is a Rectangle Class module
-It purpose is to compute the area of a rectangle
-"""
+"""This is a Rectangle Class module"""
+
 
 
 class Rectangle():
+
     """A rectangle that with width and heig"""
 
     def __init__(self, width=0, height=0):
         """
-        Magic instantiating method of an object
+            Magic instantiating method of an object
 
         Args:
             width (int): the width of a rectangle
@@ -31,8 +30,6 @@ class Rectangle():
 
         self.__width = width
         self.__height = height
-
-        # Getters and setters of the rectangle object
 
     @property
     def height(self):
@@ -98,4 +95,3 @@ class Rectangle():
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
-
