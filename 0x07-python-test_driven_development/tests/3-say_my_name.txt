@@ -1,0 +1,28 @@
+Import '''say_my_name''' function from 3-say_my_name module
+
+>>> print_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+	"""Passing two string params"""
+	>>> print_name("Robert", "Oyadier")
+	My name is Robert Oyadier
+	
+	>>> print_name(13, )
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+	
+	>>> print_name("Patience", 9)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+	
+	>>> print_name(None,"Narko")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+	
+	>>> print_name("Narko", None)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string

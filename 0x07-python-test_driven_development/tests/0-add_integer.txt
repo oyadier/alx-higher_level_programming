@@ -1,0 +1,44 @@
+This is '''0-add_integer''' module
+++++++++++++++++++++++++++++++++++
+
+Importing '''add_integer''' from '''0-add_integer''' module
+===========================================================
+>>> add_integer = __import__('0-add_integer').add_integer
+
+1. Pass two integers to the funtion
+-----------------------------------
+>>> add_integer(2, 4)
+6
+
+>>> add_integer(3, -1)
+2
+
+>>> add_integer(-34, 3)
+-31
+
+>>> add_integer(2.3, 5.4)
+7
+
+>>> add_integer(3)
+101
+
+>>> add_integer("string", 3)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(4, "String")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+>>> add_integer(None, 3)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>> add_integer(3, None)
+Traceback (most recent call last):
+        ...
+TypeError: b must be an integer
+	
