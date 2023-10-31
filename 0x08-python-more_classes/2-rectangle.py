@@ -2,7 +2,6 @@
 """This is a Rectangle Class module"""
 
 
-
 class Rectangle():
 
     """A rectangle that with width and heig"""
