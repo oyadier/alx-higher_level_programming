@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 
-"""
-This is a Rectangle Class module
-It purpose is to compute the area of a rectangle
-"""
+"""This is a Rectangle Class module"""
 
 
 class Rectangle():
     """
     This is a Rectangle Class module
-    It purpose is to compute the area of a rectangle
+    Attributes:
+        __init__: instantiate an object
+        area: compute the area of a rectangle
     """
 
     def __init__(self, width=0, height=0):
