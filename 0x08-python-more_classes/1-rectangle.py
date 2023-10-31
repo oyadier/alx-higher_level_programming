@@ -4,12 +4,7 @@
 
 
 class Rectangle():
-    """
-    This is a Rectangle Class module
-    Attributes:
-        __init__: instantiate an object
-        area: compute the area of a rectangle
-    """
+    """A rectange with width and height"""
 
     def __init__(self, width=0, height=0):
         """
