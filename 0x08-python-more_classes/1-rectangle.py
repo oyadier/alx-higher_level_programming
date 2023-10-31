@@ -7,6 +7,10 @@ It purpose is to compute the area of a rectangle
 
 
 class Rectangle():
+    """
+    This is a Rectangle Class module
+    It purpose is to compute the area of a rectangle
+    """
 
     def __init__(self, width=0, height=0):
         """
