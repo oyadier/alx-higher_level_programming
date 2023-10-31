@@ -7,6 +7,7 @@ It purpose is to compute the area of a rectangle
 
 
 class Rectangle():
+    """A rectangle that with width and heig"""
 
     def __init__(self, width=0, height=0):
         """
@@ -35,14 +36,30 @@ class Rectangle():
 
     @property
     def height(self):
+        """
+        Get the value of height
+
+        Returns:
+            (int): the height
+        """
         return self.__height
 
     @property
     def width(self):
+        """
+        Get the value of width
+
+        Returns:
+            (int): the width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """
+        Args:
+            value (int): the new width
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -51,6 +68,12 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
+        """
+        Set the new height
+
+        Args:
+            value (int): the new height
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -59,12 +82,18 @@ class Rectangle():
 
     def area(self):
         """
-        Computing and returning the area of a rectangle
+        Computing the area of a rectangle
+
+        Returns:
+            (int): area of a rectangle
         """
         return self.__width * self.__height
     def perimeter(self):
         """
-        Computing and returning the parameter of a rectangle
+        Computing the parameter of a rectangle
+
+        Returns:
+            (int): the perimeter of a rectangle
         """
         if self.__width == 0 or self.__height == 0:
             return 0
