@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
-"""This is a Rectangle Class module"""
+"""
+This is a Rectangle Class module
+It purpose is to compute the area of a rectangle
+"""
 
 
 class Rectangle():
-    """A rectange with width and height"""
+    """A rectangle that with width and heig"""
 
     def __init__(self, width=0, height=0):
         """
@@ -33,14 +36,30 @@ class Rectangle():
 
     @property
     def height(self):
+        """
+        Get the value of height
+
+        Returns:
+            (int): the height
+        """
         return self.__height
 
     @property
     def width(self):
+        """
+        Get the value of width
+
+        Returns:
+            (int): the width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """
+        Args:
+            value (int): the new width
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -49,6 +68,12 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
+        """
+        Set the new height
+
+        Args:
+            value (int): the new height
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
