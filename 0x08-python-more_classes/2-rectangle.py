@@ -8,7 +8,7 @@ class Rectangle():
 
     def __init__(self, width=0, height=0):
         """
-            Magic instantiating method of an object
+        Magic instantiating method of an object
 
         Args:
             width (int): the width of a rectangle
