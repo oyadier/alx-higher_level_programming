@@ -9,7 +9,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_int(self):
         """Test valid integers."""
-        self.assertEqual(max_integer([10, -20, 30, -40]), 3)
+        self.assertEqual(max_integer([10, -20, 30, -40]), 30)
         self.assertEqual(max_integer([50]), 50)
         self.assertEqual(max_integer([0, -5, -10]), 0)
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
