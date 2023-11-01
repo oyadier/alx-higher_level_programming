@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """A rectangle module"""
 
 
@@ -108,8 +107,7 @@ class Rectangle:
 
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
-    del __del__(self):
-        """Deleting rectangle object
-        """
+    def __del__(self):
+        """Detecs recatangle deletion"""
 
         print("Bye rectangle...")
