@@ -26,3 +26,8 @@ Now use it:
 	Traceback (most recent call last):
 		...
 	TypeError: last_name must be a string
+
+	>>> print_name(None, )
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
