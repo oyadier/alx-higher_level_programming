@@ -18,11 +18,10 @@ class Rectangle:
 
         re_1 = rect_1.area()
         re_2 = rect_2.area()
+
         if re_1 == re_2:
             return re_1
-        if re_1 > re_2:
-            return re_1
-        return re_2
+        return re_2 if re_2 > re_1 else re_1
 
     def __init__(self, width=0, height=0):
         """Initialized Rectangle
