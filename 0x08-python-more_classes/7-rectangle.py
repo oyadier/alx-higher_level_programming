@@ -86,20 +86,25 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """return rectangle in a user readable form
+        """Print rectangle using 'print_symbol'
 
         Returns:
             rectangle(string)
         """
-
-        str = ""
+        
+        str_symbol = ""
+        
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        if not isinstance(self.print_symbol, str):
+            self.print_symbol = str(self.print_symbol)
 
         for i in range(self.__height):
-            str += Rectangle.print_symbol * self.__width
+            str_symbol += self.print_symbol * self.__width
             if i < self.height - 1:
-                str += "\n"
+                str_symbol += "\n"
 
-        return str
+        return str_symbol
 
     def __repr__(self):
         """return rectangle in a string format
