@@ -91,9 +91,9 @@ class Rectangle:
         Returns:
             rectangle(string)
         """
-        
+
         str_symbol = ""
-        
+
         if self.__width == 0 or self.__height == 0:
             return ""
         if not isinstance(self.print_symbol, str):
