@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Check two objects"""
 def is_same_class(obj, a_class):
     """
     Check identical object
