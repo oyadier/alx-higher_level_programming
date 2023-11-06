@@ -3,14 +3,14 @@
 
 
 def is_king_of_class(obj, a_class):
-    """
-    Checks identical object.
+    """Checks identical object.
 
-    Args:
-        obj (object): first object.
-        a_class: the second object.
+        Args:
+            obj (object): first object.
+            a_class (object): the second object.
 
-    Return:
-        bool: if same orderwise False.
+        Return:
+            True: if same.
+            False: if not.
     """
     return isinstance(obj, a_class)
