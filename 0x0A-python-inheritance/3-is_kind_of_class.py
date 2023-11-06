@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''Compare objects whether they are the same.'''
 
-
 def is_king_of_class(obj, a_class):
     """
     Check identical object.
