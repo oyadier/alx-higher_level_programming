@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Check two objects"""
 def is_same_class(obj, a_class):
     """
@@ -9,8 +10,4 @@ def is_same_class(obj, a_class):
 
     Return: True if same orderwise False
     """
-
-    if isinstance(obj.__repr__(), a_class):
-        return True
-    else:
-        return False
+    return isinstance(obj, a_class)
