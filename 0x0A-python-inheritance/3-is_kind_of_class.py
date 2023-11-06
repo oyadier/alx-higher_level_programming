@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''This functino Compares objects whether they are the same.'''
+"""This function Compares objects whether they are the same."""
 
 
 def is_king_of_class(obj, a_class):
@@ -8,7 +8,7 @@ def is_king_of_class(obj, a_class):
 
     Args:
         obj (object): first object.
-         a_class: the second object.
+        a_class: the second object.
 
     Return:
         bool: if same orderwise False.
