@@ -1,0 +1,26 @@
+This is test file for '''1-my_list'''
+++++++++++++++++++++++++++++++++++++
+
+Importint the '''print_sorted''' function and point it
+======================================================
+>>> my_list = __import__('1-my_list').MyList.print_sorted
+
+Testing with positive int
+__________________________
+>>> _list = [3, 4, 1, 2]
+>>> my_list(_list)
+[1, 2, 3, 4]
+
+1 elem case
+____________
+>>> _list = [0]
+>>> my_list(_list)
+[0]
+
+>>> _list = [4, 34, -1]
+>>> my_list(_list)
+[-1, 4, 34]
+
+>>> _list = [-23, -4, -234]
+>>> my_list(_list)
+[-234, -23, -4]
