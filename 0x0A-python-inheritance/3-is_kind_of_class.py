@@ -2,7 +2,7 @@
 """Compare objects."""
 
 
-def is_same_class(obj, a_class):
+def is_king_of_class(obj, a_class):
     """
     Check identical object.
     obj (object): first object.
