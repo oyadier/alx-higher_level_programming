@@ -10,7 +10,7 @@ def is_king_of_class(obj, a_class):
             a_class (object): the second object.
 
         Return:
-            True: if same.
-            False: if not.
+            True: if same
+            False: if not
     """
     return isinstance(obj, a_class)
