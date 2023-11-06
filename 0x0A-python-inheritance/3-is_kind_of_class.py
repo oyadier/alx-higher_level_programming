@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-    """Check two objects"""
+"""Check two objects"""
 
 
 def is_same_class(obj, a_class):
@@ -11,4 +10,5 @@ def is_same_class(obj, a_class):
 
     Return: True if same orderwise False
     """
+
     return isinstance(obj, a_class)
