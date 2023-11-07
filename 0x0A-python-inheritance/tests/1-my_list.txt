@@ -1,7 +1,7 @@
 This is test file for '''1-my_list'''
 ++++++++++++++++++++++++++++++++++++
 
-Importint the '''print_sorted''' function and point it
+Importing the '''print_sorted''' function and point it
 ======================================================
 >>> my_list = __import__('1-my_list').MyList.print_sorted
 
