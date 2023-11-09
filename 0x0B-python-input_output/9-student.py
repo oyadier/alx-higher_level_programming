@@ -2,7 +2,6 @@
 """Student module with attribute"""
 
 
-
 class Student:
 
     def __init__(self, first_name, last_name, age):
@@ -17,7 +16,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     def to_json(self):
         """Convert student obj to json rep"""
+
         return self.__dict__
