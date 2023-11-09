@@ -10,10 +10,7 @@ def add_item(args, filename):
         @args: The arguments that need to be added.
         @filename: The file that needs to be updated
     '''
-    try:
-        content = load_from_json(filename)
-    except Exception:
-        content = []
+    content = load_from_json(filename)
 
     for item in args:
         content.append(item)
