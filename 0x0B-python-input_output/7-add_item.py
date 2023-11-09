@@ -24,6 +24,7 @@ def add_item(args, filename):
 
 
 if __name__ == "__main__":
+    """The main function"""
     args = sys.argv[1:]
     filename = "add_item.json"
     add_item(args, filename)
