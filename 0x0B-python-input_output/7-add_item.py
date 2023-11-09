@@ -12,7 +12,7 @@ def add_item(args, filename):
     '''
     try:
         content = load_from_json(filename)
-    except:
+    except Exception:
         content = []
 
     for item in args:
