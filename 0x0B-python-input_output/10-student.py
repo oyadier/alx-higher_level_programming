@@ -27,7 +27,7 @@ class Student:
         json_dict = {}
         diction = self.__dict__
         if not attrs:
-            attrs = diction.keys()
+            return diction
 
         for key in attrs:
             if key in diction:
