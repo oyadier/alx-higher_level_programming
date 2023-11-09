@@ -21,10 +21,3 @@ def add_item(args, filename):
     for item in args:
         content.append(item)
     save_to_json(content, filename)
-
-
-if __name__ == "__main__":
-    """The main function"""
-    args = sys.argv[1:]
-    filename = "add_item.json"
-    add_item(args, filename)
