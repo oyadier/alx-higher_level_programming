@@ -1,23 +1,17 @@
 #!/usr/bin/python3
-"""Add Argvs module"""
-
-
+"""Handles file input and saves to file"""
 from sys import argv
-save_to_json = __import__("7-save_to_json_file").save_to_json_file
-load_from_json = __import__("8-load_from_json_file").load_from_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 
-def add_item(args, filename):
-    """
-        adds items to a json file
-        @args: The arguments that need to be added.
-        @filename: The file that needs to be updated
-    """
-    try:
-        content = load_from_json(filename)
-    except Exception:
-        content = []
-
-    for item in args:
-        content.append(item)
-    save_to_json(content, filename)
+argv.pop(0)
+try:
+    deserialized = load_from_json_file("add_item.json")
+    if deserialized is None:
+        save_to_json_file(argv, "add_item.json")
+    else:
+        deserialized.extend(argv)
+        save_to_json_file(deserialized, "add_item.json")
+except FileNotFoundError:
+    save_to_json_file(argv, "add_item.json")
