@@ -1,0 +1,83 @@
+"""Test moddule for `base` module"""
+from models.base import Base
+from models.rectangle import Rectangle
+import unittest
+
+
+class TestBase(unittest.TestCase):
+    """Test if id is None"""
+    def test_id_none(self):
+        """Increate id value if id is None"""
+        Base._Base__nb__objects = 0
+        bas = Base()
+        self.assertEqual(bas.id, 2)
+
+    def test_id_value(self):
+        """Assert equal the value of id"""
+        obj = Base(23)
+        self.assertEqual(obj.id, 23)
+
+    def test_nb_obj_value(self):
+        """Check if id value not equal"""
+        obj1 = Base(24)
+        self.assertNotEqual(obj1.id, 58)
+
+    def test_isinstance(self):
+        """Test for it instance"""
+        base_obj = Base()
+        self.assertIsInstance(base_obj, Base)
+
+    def test_typeError(self):
+        """Test with String"""
+        obj = Base("typeError")
+        self.assertRaises(TypeError, "Id must be an integer")
+
+    def test_id_float(self):
+        """Test floating number"""
+        obj = Base(2.3)
+        self.assertEqual(obj.id, 2.3)
+
+    def test_id_list(self):
+        """Testing with a list elements"""
+        ids = [2, 34, 4, 55]
+        for i in range(len(ids)):
+            ele = ids[i]
+            bas = Base(ele)
+            self.assertEqual(bas.id, ele)
+
+    def test_with_nb(self):
+        """Init __nb__obj"""
+        Base._Base__nb_objects = 0
+        obj = Base()
+        self.assertEqual(obj.id, 1)
+
+    def test_multiple_obj(self):
+        """Test with multi obj"""
+        Base._Base__nb_objects = 0
+        ob = Base()
+        ob1 = Base()
+        ob2 = Base(45)
+        self.assertEqual(ob1.id, 2)
+
+    def test_multiple1_obj(self):
+        """Test with multiple object"""
+        Base._Base__nb_objects = 0
+        ob = Base()
+        ob1 = Base()
+        ob2 = Base(45)
+        self.assertNotEqual(ob2.id, 2)
+
+    def test_multiple2_obj(self):
+        """Create more than 3 objects"""
+        Base._Base__nb_objects = 0
+        ob = Base()
+        ob1 = Base()
+        ob2 = Base(45)
+        ob3 = Base()
+        self.assertEqual(ob3.id, 3)
+
+    def test_id_by_rectangle(self):
+        """Use Rectangle to set id"""
+        ob = Base()
+        rec = Rectangle(2, 4, 0, 2, 290)
+        self.assertEqual(rec.id, 290)
