@@ -30,7 +30,20 @@ class TestBase(unittest.TestCase):
     def test_typeError(self):
         """Test with String"""
         obj = Base("typeError")
-        self.assertRaises(TypeError, "Id must be an integer")
+        self.assertRaises(TypeError, "Not valid value")
+
+    def test_list_typeError(self):
+        """Passing List"""
+        Base._Base__nb__objects = 0
+        _list = [1 ,3, 8]
+        obj = Base(_list)
+        self.assertRaises(TypeError, "Not valid value")
+
+    def test_same_obj(self):
+        obj = Base()
+        obj1 = Base(34)
+        rec = Rectangle(2, 5)
+        self.assertEqual(rec.id, 4)
 
     def test_id_float(self):
         """Test floating number"""
@@ -81,3 +94,5 @@ class TestBase(unittest.TestCase):
         ob = Base()
         rec = Rectangle(2, 4, 0, 2, 290)
         self.assertEqual(rec.id, 290)
+
+
