@@ -2,7 +2,7 @@
 from models.base import Base
 from models.rectangle import Rectangle
 import unittest
-
+import json
 
 class TestBase(unittest.TestCase):
     """Test if id is None"""
@@ -95,4 +95,24 @@ class TestBase(unittest.TestCase):
         rec = Rectangle(2, 4, 0, 2, 290)
         self.assertEqual(rec.id, 290)
 
+    def test_increase_id(self):
+        ob = Base()
+        ob.id = 90
+        self.assertEqual(ob.id, 90)
 
+    """Json Test"""
+    def test_none_dic(self):
+        ob = Base(1)
+        self.assertEqual(ob.to_json_string(None), "[]")
+
+    def test_with_list(self):
+        ob = Base()
+        _lis = {'name': "Oyadier", 'age': 13}
+        json_ob =  ob.to_json_string(_lis)
+        self.assertEqual(json_ob, '{"name": "Oyadier", "age": 13}')
+
+    def test_with_list(self):
+        ob = Base()
+        _lis = {'name': "Oyadier", 'age': 13}
+        json_ob =  ob.to_json_string(_lis)
+        self.assertEqual(json.loads(json_ob)['name'], "Oyadier")
