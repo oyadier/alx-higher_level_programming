@@ -118,11 +118,14 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """String Rep of Rectangle object"""
-
-        return f"[{self.__class__.__name__}] \
- ({self.id}) {self.__x}/{self.__y} \
- - {self.__width}/{self.__height}"
+        """Returns string representation of the instance"""
+        string = "[{}] ({}) {}/{} - {}"
+        if type(self) == Rectangle:
+            return "{}/{}".format(string.format(self.__class__.__name__,
+                                                self.id, self.__x, self.__y,
+                                                self.__width), self.__height)
+        return string.format(self.__class__.__name__, self.id, self.__x,
+                             self.__y, self.__width)
 
     def update(self, *args, **kwargs):
 
