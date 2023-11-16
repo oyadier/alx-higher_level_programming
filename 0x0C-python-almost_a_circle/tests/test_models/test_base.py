@@ -28,21 +28,25 @@ class TestBase(unittest.TestCase):
 
     def test_id_value(self):
         """Assert equal the value of id"""
+        Base._Base__nb_objects = 0
         obj = Base(23)
         self.assertEqual(obj.id, 23)
 
     def test_nb_obj_value(self):
         """Check if id value not equal"""
+        Base._Base__nb_objects = 0
         obj1 = Base(24)
         self.assertNotEqual(obj1.id, 58)
 
     def test_isinstance(self):
         """Test for it instance"""
+        Base._Base__nb_objects = 0
         base_obj = Base()
         self.assertIsInstance(base_obj, Base)
 
     def test_typeError(self):
         """Test with String"""
+        Base._Base__nb_objects = 0
         obj = Base("typeError")
         self.assertRaises(TypeError, "Not valid value")
 
@@ -54,18 +58,21 @@ class TestBase(unittest.TestCase):
         self.assertRaises(TypeError, "Not valid value")
 
     def test_same_obj(self):
+        Base._Base__nb_objects = 0
         obj = Base()
         obj1 = Base(34)
         rec = Rectangle(2, 5)
-        self.assertEqual(rec.id, 4)
+        self.assertEqual(rec.id, 2)
 
     def test_id_float(self):
         """Test floating number"""
+        Base._Base__nb_objects = 0
         obj = Base(2.3)
         self.assertEqual(obj.id, 2.3)
 
     def test_id_list(self):
         """Testing with a list elements"""
+        Base._Base__nb_objects = 0
         ids = [2, 34, 4, 55]
         for i in range(len(ids)):
             ele = ids[i]
@@ -105,33 +112,39 @@ class TestBase(unittest.TestCase):
 
     def test_id_by_rectangle(self):
         """Use Rectangle to set id"""
+        Base._Base__nb_objects = 0
         ob = Base()
         rec = Rectangle(2, 4, 0, 2, 290)
         self.assertEqual(rec.id, 290)
 
     def test_increase_id(self):
+        Base._Base__nb_objects = 0
         ob = Base()
         ob.id = 90
         self.assertEqual(ob.id, 90)
 
     """Json Test"""
     def test_none_dic(self):
+        Base._Base__nb_objects = 0
         ob = Base(1)
         self.assertEqual(ob.to_json_string(None), "[]")
 
     def test_with_list(self):
+        Base._Base__nb_objects = 0
         ob = Base()
         _lis = {'name': "Oyadier", 'age': 13}
         json_ob =  ob.to_json_string(_lis)
         self.assertEqual(json_ob, '{"name": "Oyadier", "age": 13}')
 
     def test_get_json_value(self):
+        Base._Base__nb_objects = 0
         ob = Base()
         _lis = {'name': "Oyadier", 'age': 13}
         json_ob =  ob.to_json_string(_lis)
         self.assertEqual(json.loads(json_ob)['name'], "Oyadier")
 
     def test_load_dic(self):
+        Base._Base__nb_objects = 0
         ob = Base()
         _lis = {'name': "Oyadier", 'age': 13}
         json_ob =  ob.to_json_string(_lis)
