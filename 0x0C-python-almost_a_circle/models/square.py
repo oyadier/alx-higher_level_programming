@@ -24,13 +24,14 @@ class Square(Rectangle):
         Returns:
             value of size
         """
-        return super().width()
+        return self.width
 
     @size.setter
     def size(self, value):
         """sets the dimensions of `Square`"""
-        super().width(value)
-        super().height(value)
+        
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """Updates the values of the class"""

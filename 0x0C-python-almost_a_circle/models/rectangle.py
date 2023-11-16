@@ -45,7 +45,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """Get the private width arribute"""
-        return __width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -59,7 +59,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """Get the private height arribute"""
-        return __height
+        return self.__height
 
     @height.setter
     def height(self, value):
