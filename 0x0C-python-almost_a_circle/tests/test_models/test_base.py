@@ -4,13 +4,27 @@ from models.rectangle import Rectangle
 import unittest
 import json
 
+
 class TestBase(unittest.TestCase):
     """Test if id is None"""
     def test_id_none(self):
         """Increate id value if id is None"""
         Base._Base__nb__objects = 0
-        bas = Base()
-        self.assertEqual(bas.id, 2)
+        bas = Base(None)
+        print(bas.id)
+        self.assertEqual(bas.id, 3)
+
+    def test_has_id(self):
+        """Increate id value if id is None"""
+        Base._Base__nb__objects = 0
+        bas = Base(None)
+        self.assertTrue(hasattr(bas, "id"), True)
+
+    def test_id_none(self):
+        """Increate id value if id is None"""
+        Base._Base__nb__objects = 0
+        bas = Base(None)
+        self.assertFalse(hasattr(bas, "width"))
 
     def test_id_value(self):
         """Assert equal the value of id"""
@@ -111,8 +125,15 @@ class TestBase(unittest.TestCase):
         json_ob =  ob.to_json_string(_lis)
         self.assertEqual(json_ob, '{"name": "Oyadier", "age": 13}')
 
-    def test_with_list(self):
+    def test_get_json_value(self):
         ob = Base()
         _lis = {'name': "Oyadier", 'age': 13}
         json_ob =  ob.to_json_string(_lis)
         self.assertEqual(json.loads(json_ob)['name'], "Oyadier")
+
+    def test_load_dic(self):
+        ob = Base()
+        _lis = {'name': "Oyadier", 'age': 13}
+        json_ob =  ob.to_json_string(_lis)
+        _to_list = ob.from_json_string(json_ob)
+        self.assertEqual(_to_list, {"name": "Oyadier", "age": 13})
