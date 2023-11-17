@@ -128,3 +128,32 @@ class TestSquare(unittest.TestCase):
         sq.update(34, 90, 23, 100)
         self.assertEqual(sq.size, 90)
         self.assertEqual(sq.y, 100)
+
+    def test_update_with_1dic(self):
+        Base._Base__nb_objects = 0
+        sq = Square(100)
+        sq.update(**{'id': 23})
+        self.assertEqual(sq.id, 23)
+
+    def test_update_with_2dic(self):
+        Base._Base__nb_objects = 0
+        sq = Square(100)
+        sq.update(**{'id': 23, 'size': 19})
+        self.assertEqual(sq.id, 23)
+        self.assertEqual(sq.size, 19)
+
+    def test_update_with_3dic(self):
+        Base._Base__nb_objects = 0
+        sq = Square(100)
+        sq.update(**{'id': 23, 'size': 19, 'x': 100})
+        self.assertEqual(sq.id, 23)
+        self.assertEqual(sq.size, 19)
+        self.assertEqual(sq.x, 100)
+
+    def test_update_with_4dic(self):
+        Base._Base__nb_objects = 0
+        sq = Square(100)
+        sq.update(**{'id': 23, 'size': 19, 'x': 100})
+        self.assertEqual(sq.id, 23)
+        self.assertEqual(sq.size, 19)
+        self.assertEqual(sq.x, 100)
