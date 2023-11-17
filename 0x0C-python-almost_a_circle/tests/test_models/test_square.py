@@ -74,6 +74,7 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
         with self.assertRaises(ValueError):
             sq = Square(0)
+
     """Testing for float"""
     def test_size_valueError(self):
         Base._Base__nb_objects = 0
@@ -84,3 +85,11 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
         sq = Square(3, 4, 5, 2)
         self.assertEqual(sq.__str__(), "[Square] (2) 4/5 - 3")
+
+    def test_to_dictionary(self):
+        Base._Base__nb_objects = 0
+        sq = Square(3, 2, 4, 5)
+        dic = sq.to_dictionary()
+        self.assertDictEqual(dic, {'id':  5, 'size': 3, 'x': 2, 'y':4})
+        self.assertEqual(type(dic), dict)
+
