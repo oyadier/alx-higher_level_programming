@@ -36,6 +36,16 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
         with self.assertRaises(TypeError):
             sq = Square(3, 1, "3")
+    
+    def test_list(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            sq = Square([2, 4], 3)
+
+    def test_turple(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            sq = Square(2, (4, 3))
 
     def test_all_int(self):
         Base._Base__nb_objects = 0
@@ -64,4 +74,13 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
         with self.assertRaises(ValueError):
             sq = Square(0)
+    """Testing for float"""
+    def test_size_valueError(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            sq = Square(1.2)
 
+    def test__str__(self):
+        Base._Base__nb_objects = 0
+        sq = Square(3, 4, 5, 2)
+        self.assertEqual(sq.__str__(), "[Square] (2) 4/5 - 3")
