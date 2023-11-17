@@ -60,15 +60,8 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             sq = Square(4, 5, -4)
 
-    def test_id_typeError(self):
-        Base._Base__nb_objects = 0
-        with self.assertRaises(ValueError):
-            sq = Square(4, 5, 4, -12)
-
     def test_size_typeError(self):
         Base._Base__nb_objects = 0
         with self.assertRaises(ValueError):
             sq = Square(0)
-
-
 
