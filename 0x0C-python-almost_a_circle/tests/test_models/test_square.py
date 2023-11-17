@@ -16,16 +16,33 @@ class TestSquare(unittest.TestCase):
         sq = Square(1)
         self.assertEqual(sq.size, 1)
 
-    def test_id(self):
-        """Size is pass"""
-        Base._Base__nb_objects = 0
-        sq = Square(1)
-        re = Rectangle(23, 3)
-        sq.id += 2
-        self.assertEqual(sq.id, 3)
-
     def test_diff_size(self):
         """Diff size values"""
         Base._Base__nb_objects = 0
         sq = Square(1, 2)
-        self.assertEqual(sq.size, 1)
+        self.assertEqual(sq.x, 2)
+
+    def test_string(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            sq = Square("3")
+
+    def test_type(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            sq = Square(2, "2")
+
+    def test_y_string(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            sq = Square(3, 1, "3")
+
+    def test_all_int(self):
+        Base._Base__nb_objects = 0
+        sq = Square(3, 2, 4, 5)
+        self.assertEqual(sq.size, 3)
+        self.assertEqual(sq.x, 2)
+        self.assertEqual(sq.y, 4)
+        self.assertEqual(sq.id, 5)
+
+
