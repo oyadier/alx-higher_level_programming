@@ -45,4 +45,30 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(sq.y, 4)
         self.assertEqual(sq.id, 5)
 
+    def test_size_typeError(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(ValueError):
+            sq = Square(-1)
+
+    def test_x_tyepError(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(ValueError):
+            sq = Square(2, -3)
+
+    def test_y_typeError(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(ValueError):
+            sq = Square(4, 5, -4)
+
+    def test_id_typeError(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(ValueError):
+            sq = Square(4, 5, 4, -12)
+
+    def test_size_typeError(self):
+        Base._Base__nb_objects = 0
+        with self.assertRaises(ValueError):
+            sq = Square(0)
+
+
 
