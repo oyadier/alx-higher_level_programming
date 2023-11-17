@@ -93,3 +93,38 @@ class TestSquare(unittest.TestCase):
         self.assertDictEqual(dic, {'id':  5, 'size': 3, 'x': 2, 'y':4})
         self.assertEqual(type(dic), dict)
 
+    def test_update_no_param(self):
+        Base._Base__nb_objects = 0
+        sq = Square(2)
+        sq.update()
+        self.assertEqual(sq.id, 1)
+
+    def test_update_with_1param(self):
+        Base._Base__nb_objects = 0
+        sq = Square(2)
+        sq.update(89)
+        self.assertEqual(sq.id, 89)
+
+    def test_update_with_2param(self):
+        Base._Base__nb_objects = 0
+        sq = Square(2)
+        sq.update(89, 21)
+        self.assertEqual(sq.id, 89)
+        self.assertEqual(sq.size, 21)
+    
+    def test_update_with_3param(self):
+        Base._Base__nb_objects = 0
+        sq = Square(2, 10, 45)
+        sq.update(89, 21, 9)
+        self.assertEqual(sq.id, 89)
+        self.assertEqual(sq.size, 21)
+        self.assertEqual(sq.x, 9)
+
+    def test_update_with_4param(self):
+        Base._Base__nb_objects = 0
+        sq = Square(2, 10, 45)
+        sq.update(89, 21, 9)
+        self.assertEqual(sq.id, 89)
+        sq.update(34, 90, 23, 100)
+        self.assertEqual(sq.size, 90)
+        self.assertEqual(sq.y, 100)
