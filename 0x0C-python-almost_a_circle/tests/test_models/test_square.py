@@ -14,3 +14,8 @@ class TestSquare(unittest.TestCase):
         """Size is pass"""
         sq = Square(1)
         self.assertEqual(sq.size, 1)
+
+    def test_id(self):
+        """Size is pass"""
+        sq = Square(1)
+        self.assertEqual(sq.id, 1)
