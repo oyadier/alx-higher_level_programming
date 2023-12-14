@@ -1,4 +1,4 @@
 -- List all the empty value
 SELECT score, name
 FROM second_table
-WHERE name NOT "";
+WHERE name IS NOT NULL ORDER BY DESC;
