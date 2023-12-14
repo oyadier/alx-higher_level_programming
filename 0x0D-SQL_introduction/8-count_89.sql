@@ -1,2 +1,2 @@
 -- Count number of records
-SELECT COUNT(id) from hbtn_0c_0;
+SELECT COUNT(id) from first_table;
