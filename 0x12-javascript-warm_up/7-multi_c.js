@@ -9,5 +9,5 @@ if (index.length < 3) {
   while (lop < index[2]) {
     console.log('C is fun');
     lop++;
- }
+  }
 }
