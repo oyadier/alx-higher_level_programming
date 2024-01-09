@@ -4,6 +4,8 @@ let lop = 0;
 let x = 0;
 if (index.length < 3 || !isNaN(typeof (Number(index[2])))) {
   console.log('Missing size');
+} else if (index.lengh < 1) {
+  console.log('');
 } else {
   while (lop < index[2]) {
     let sq = '';
