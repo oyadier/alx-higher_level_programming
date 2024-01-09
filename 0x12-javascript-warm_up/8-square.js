@@ -10,7 +10,7 @@ if (index.length < 3 || !isNaN(typeof (Number(index[2])))) {
   while (lop < index[2]) {
     let sq = '';
     for (x; x < index[2]; x++) {
-      sq += 'x';
+      sq += 'X';
     }
     console.log(sq);
     x = 0;
