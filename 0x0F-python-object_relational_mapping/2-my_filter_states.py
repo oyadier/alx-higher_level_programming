@@ -23,8 +23,8 @@ def search_by_input(username, password, name, searched):
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
-        '''if (rows[1] == searched):'''
-        print(row)
+        if (row == searched):
+            print(row)
     cur.close()
     con.close()
 
