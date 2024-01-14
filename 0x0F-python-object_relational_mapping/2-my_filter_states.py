@@ -13,7 +13,7 @@ def search_by_input(username, password, name, searched):
             searched (string): keyword to search for
     '''
     con = MySQLdb.connect(host="localhost",
-                          port=3360,
+                          port=3306,
                           user=username,
                           passwd=password,
                           db=name)
@@ -23,7 +23,7 @@ def search_by_input(username, password, name, searched):
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
-        if (row == searched):
+        if (rows[1] == searched):
             print(row)
     cur.close()
     con.close()
