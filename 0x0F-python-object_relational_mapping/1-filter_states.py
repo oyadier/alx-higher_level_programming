@@ -19,8 +19,8 @@ def search_filter(username, password, name):
                           db=name,
                           charset='utf8')
     curs = con.cursor()
-    curs.execute(f"SELECT * FROM `states` WHERE `state.name`\
-                LIKE 'N%' ORDER BY `states.id` ASC")
+    curs.execute(f"SELECT * FROM `states` WHERE `name`\
+                LIKE 'N%' ORDER BY `id` ASC")
     rows = curs.fetchall()
 
     for row in rows:
