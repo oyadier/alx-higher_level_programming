@@ -28,6 +28,7 @@ def search_by_input(username, password, name, searched):
     cur.close()
     con.close()
 
+
 if __name__ == "__main__":
     arg = sys.argv
     user = arg[1]
