@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+'''Using MySQLdb module to access and print rows in db'''
 import sys
 import MySQLdb
-'''Using MySQLdb module to access and print rows in db'''
 
 
 def select_rows(username, password, db):
