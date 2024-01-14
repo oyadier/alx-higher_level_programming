@@ -17,7 +17,8 @@ def search_by_input(username, password, name, searched):
                           user=username,
                           db=name)
     cur = con.cursor()
-    query = "SELECT * FROM states WHERE name=('{}')".format(searched)
+    query = "SELECT * FROM states WHERE\
+            name=('{}') ORDER BY id ASC".format(searched)
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
