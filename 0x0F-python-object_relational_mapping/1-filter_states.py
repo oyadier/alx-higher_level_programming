@@ -24,7 +24,8 @@ def search_filter(username, password, name):
     rows = curs.fetchall()
 
     for row in rows:
-        print(row)
+        if ("N" in row[1]):
+            print(row)
 
     curs.close()
     con.close()
