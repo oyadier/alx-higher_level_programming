@@ -15,6 +15,7 @@ def search_by_input(username, password, name, searched):
     con = MySQLdb.connect(host="localhost",
                           port=3360,
                           user=username,
+                          passwd=password,
                           db=name)
     cur = con.cursor()
     query = "SELECT * FROM states WHERE\
@@ -22,8 +23,8 @@ def search_by_input(username, password, name, searched):
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
-        if (rows[1] == searched):
-            print(row)
+        '''if (rows[1] == searched):'''
+        print(row)
     cur.close()
     con.close()
 
