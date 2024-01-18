@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Load first rows from the db"""
 import sys
 from sqlalchemy import create_engine
 from model_state import Base, State
