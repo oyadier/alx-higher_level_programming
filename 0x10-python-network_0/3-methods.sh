@@ -1,3 +1,3 @@
 #!/bin/bash
 # he is by enablec
-curl -s -i -X OPTIONS "$url" | grep -i allo
+curl -Is "$1"| grep Allow |cut -c 8-
