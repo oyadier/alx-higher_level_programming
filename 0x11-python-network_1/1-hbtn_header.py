@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# Get the id of a request
 """Get the request id from the url content"""
 import urllib.request
 import sys
