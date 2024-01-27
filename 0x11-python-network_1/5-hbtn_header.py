@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Response header value"""
 from requests import get
+import requests
 from sys import argv
 
 
