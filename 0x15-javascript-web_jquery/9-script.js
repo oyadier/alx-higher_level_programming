@@ -1,7 +1,8 @@
 const $ = window.$;
-const url = 'https://fourtonfish.com/hellosalut/?lang=fr';
-
-window.Document.$.getJSON(url, function (body) {
-  const hello = body.hello;
-  $('DIV#hello').text(hello);
+$(function() {
+    // Fetch data from the API
+    $.get('https://hellosalut.stefanbohacek.dev/?lang=fr', function(data) {
+        // Display the translation in the <div id="hello">
+        $('DIV#hello').text(data.hello);
+    });
 });
