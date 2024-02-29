@@ -1,6 +1,4 @@
-window.onload = function(){
-    var headerElement = document.querySelector('header');
-    headerElement.style.color = '#FF0000';
-
-}
-
+window.onload = function () {
+  const headerElement = document.querySelector('header');
+  headerElement.style.color = '#FF0000';
+};
